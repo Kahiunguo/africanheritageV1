@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | African Heritage Hair Oils</title>
+
+  <!-- Tailwind CSS (CDN - for development) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {}
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .focus-ring:focus {
+      outline: 2px solid #fbbf24;
+      outline-offset: 2px;
+      border-radius: 0.5rem;
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-900 antialiased">
+
+  <!-- Navigation (identical to index.html) -->
+  <nav class="bg-slate-900 text-white shadow-md md:shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16 md:h-[72px]">
+        <!-- Logo -->
+        <a href="index.html" class="flex flex-col md:flex-row md:items-baseline md:space-x-2 group">
+          <span class="text-xl md:text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600 group-hover:from-yellow-300 transition-all">
+           African Heritage Oils
+          </span>
+          <span class="text-xs md:text-sm font-light text-slate-400 mt-0.5 md:mt-0 tracking-wide">
+            African Hair Care
+          </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <ul class="hidden md:flex items-center space-x-1">
+          <li>
+            <a href="index.html" class="px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all duration-200 hover:bg-slate-800/70 hover:text-yellow-300 focus-ring">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all duration-200 bg-slate-800/70 text-yellow-300 focus-ring">About</a>
+          </li>
+          <li>
+            <a href="shop.html" class="px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all duration-200 hover:bg-slate-800/70 hover:text-yellow-300 focus-ring">Shop</a>
+          </li>
+          <li>
+            <a href="contact.html" class="px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all duration-200 hover:bg-slate-800/70 hover:text-yellow-300 focus-ring">Contact</a>
+          </li>
+          <li class="ml-3">
+            <a href="cart.html" class="relative p-2.5 rounded-lg text-slate-400 hover:text-yellow-300 hover:bg-slate-800/60 transition-all duration-200 focus-ring" aria-label="Shopping Cart (0 items)">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="hamburger" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-slate-800/50 transition-colors focus-ring" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle main menu">
+          <span class="w-5 h-0.5 bg-white mb-1 transition-all duration-300 origin-center"></span>
+          <span class="w-5 h-0.5 bg-white mb-1 transition-all duration-300 origin-center"></span>
+          <span class="w-5 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden overflow-hidden transition-all duration-350 ease-out max-h-0">
+        <div class="pt-2 pb-4 space-y-1.5 bg-slate-800/90 backdrop-blur-md border-t border-slate-700/30">
+          <a href="index.html" class="block px-5 py-3 text-base font-medium text-slate-200 rounded-lg hover:bg-slate-700/70 hover:text-yellow-300 transition-colors focus-ring">Home</a>
+          <a href="about.html" class="block px-5 py-3 text-base font-medium text-slate-200 rounded-lg bg-slate-700/90 text-yellow-300 transition-colors focus-ring">About</a>
+          <a href="shop.html" class="block px-5 py-3 text-base font-medium text-slate-200 rounded-lg hover:bg-slate-700/70 hover:text-yellow-300 transition-colors focus-ring">Shop</a>
+          <a href="contact.html" class="block px-5 py-3 text-base font-medium text-slate-200 rounded-lg hover:bg-slate-700/70 hover:text-yellow-300 transition-colors focus-ring">Contact</a>
+          <a href="cart.html" class="flex items-center px-5 py-3 text-base font-medium text-slate-200 rounded-lg hover:bg-slate-700/70 hover:text-yellow-300 transition-colors focus-ring">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            Cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20 md:py-28">
+    <div class="container mx-auto px-4 max-w-3xl text-center">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4">Our Story</h1>
+      <p class="text-slate-300 text-lg md:text-xl">Rooted in African tradition, crafted for modern hair care</p>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="flex flex-col md:flex-row gap-10 items-center">
+        <div class="md:w-1/2">
+          <div class="w-full h-64 bg-gradient-to-br from-amber-100 to-yellow-200 rounded-xl shadow-lg"></div>
+        </div>
+        <div class="md:w-1/2 space-y-5">
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-900">The African Heritage Legacy</h2>
+          <p class="text-slate-700 leading-relaxed">
+            For centuries, African communities have relied on the power of natural botanicals to nurture their hair. From the fertile lands of West Africa to the sun-drenched plains of East Africa, generations have passed down knowledge of potent herbs, oils, and roots that promote hair health and growth.
+          </p>
+          <p class="text-slate-700 leading-relaxed">
+            Our founder, Amina Nkosi, grew up watching her grandmother prepare special hair oils using recipes perfected over decades. Inspired by this heritage, she set out to create a product that honors these traditions while meeting the needs of contemporary hair care.
+          </p>
+          <p class="text-slate-700 leading-relaxed">
+            At African Heritage Hair Oils, we meticulously source our ingredients from ethical suppliers across the African continent, ensuring each bottle captures the essence of our cultural legacy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Benefits for All Hair Types</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-md flex items-start gap-4 hover:shadow-lg transition-shadow">
+          <div class="text-pink-500 text-3xl mt-1"><i class="fas fa-venus"></i></div>
+          <div>
+            <h3 class="font-bold text-xl mb-2">For Women</h3>
+            <p class="text-slate-600">
+              Our oils help reduce breakage, promote length retention, and enhance natural shine. Perfect for natural, relaxed, or transitioning hair.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md flex items-start gap-4 hover:shadow-lg transition-shadow">
+          <div class="text-blue-600 text-3xl mt-1"><i class="fas fa-mars"></i></div>
+          <div>
+            <h3 class="font-bold text-xl mb-2">For Men</h3>
+            <p class="text-slate-600">
+              Formulated to strengthen hair follicles, prevent thinning, and soothe dry, itchy scalps. Ideal for beards and afros alike.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ingredients Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">Natural Ingredients</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-slate-50 p-6 rounded-xl text-center hover:shadow-md transition-shadow">
+          <div class="text-green-600 text-3xl mb-3"><i class="fas fa-seedling"></i></div>
+          <h3 class="font-bold mb-2">African Black Seed Oil</h3>
+          <p class="text-slate-600 text-sm">Rich in antioxidants and essential fatty acids to nourish hair follicles</p>
+        </div>
+        <div class="bg-slate-50 p-6 rounded-xl text-center hover:shadow-md transition-shadow">
+          <div class="text-green-500 text-3xl mb-3"><i class="fas fa-leaf"></i></div>
+          <h3 class="font-bold mb-2">Moringa Oil</h3>
+          <p class="text-slate-600 text-sm">Use oil or powder mask </p>
+          <p class="text-slate-600 text-sm">Reduces dryness and breakage </p>
+          <p class="text-slate-600 text-sm">Rich in nutrients for hair strength </p>
+        </div>
+        <div class="bg-slate-50 p-6 rounded-xl text-center hover:shadow-md transition-shadow">
+          <div class="text-amber-600 text-3xl mb-3"><i class="fas fa-tree"></i></div>
+          <h3 class="font-bold mb-2">Hibiscus</h3>
+          <p class="text-slate-600 text-sm">Use leaf/flower paste or infused oil weekly</p>
+          <p class="text-slate-600 text-sm">Adds softness and shine</p>
+          <p class="text-slate-600 text-sm">Promotes thick hair growth</p>
+        </div>
+        <div class="bg-slate-50 p-6 rounded-xl text-center hover:shadow-md transition-shadow">
+          <div class="text-teal-500 text-3xl mb-3"><i class="fas fa-wind"></i></div>
+          <h3 class="font-bold mb-2">Rosemary </h3>
+          <p class="text-slate-600 text-sm">Stimulates hair growth by improving scalp circulation</p>
+          <p class="text-slate-600 text-sm">Reduces shedding and dandruff</p>
+          <p class="text-slate-600 text-sm">Use as infused oil or hair rinse (2–3 times weekly)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">How To Use</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-500 text-white font-bold text-xl rounded-full flex items-center justify-center mx-auto mb-4">1</div>
+          <h3 class="font-bold mb-2">Apply to Scalp</h3>
+          <p class="text-slate-600 text-sm">Part hair and apply oil directly to scalp using the dropper</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-500 text-white font-bold text-xl rounded-full flex items-center justify-center mx-auto mb-4">2</div>
+          <h3 class="font-bold mb-2">Massage Gently</h3>
+          <p class="text-slate-600 text-sm">Massage in circular motions for 3-5 minutes to stimulate follicles</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-500 text-white font-bold text-xl rounded-full flex items-center justify-center mx-auto mb-4">3</div>
+          <h3 class="font-bold mb-2">Distribute Through Hair</h3>
+          <p class="text-slate-600 text-sm">Apply remaining oil through the length of your hair</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-yellow-500 text-white font-bold text-xl rounded-full flex items-center justify-center mx-auto mb-4">4</div>
+          <h3 class="font-bold mb-2">Leave In</h3>
+          <p class="text-slate-600 text-sm">For best results, leave in overnight or for at least 30 minutes</p>
+        </div>
+      </div>
+      <div class="text-center text-slate-600 italic">
+        <p>Recommended: Use 2–3 times per week for optimal results</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (identical to index.html) -->
+  <footer class="bg-slate-900 text-white pt-12 pb-6">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+        <div class="text-center md:text-left mb-6 md:mb-0">
+          <div class="text-2xl font-bold">African Heritage</div>
+          <div class="text-yellow-400">Hair Oils</div>
+        </div>
+        <div class="flex space-x-4">
+         <!-- WhatsApp -->
+  <a
+    href="https://wa.me/+254113177824"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+    class="inline-block text-slate-400 hover:text-green-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 rounded-full p-1"
+  >
+    <img
+      src="css/whatsapp-icon.jpg"
+      alt="WhatsApp"
+      class="w-6 h-6 md:w-7 md:h-7 object-contain"
+    />
+  </a>
+
+  <!-- Instagram -->
+  <a
+    href="https://www.instagram.com/african.heritage__?igsh=MjhuY2R6Z2N5NGdo"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Follow us on Instagram"
+    class="inline-block text-slate-400 hover:text-pink-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-pink-600 rounded-full p-1"
+  >
+    <img
+      src="css/instagram icon.jpg"
+      alt="Instagram"
+      class="w-6 h-6 md:w-7 md:h-7 object-contain"
+    />
+  </a>
+
+  <!-- TikTok -->
+  <a
+    href="https://www.tiktok.com/@african.heritage_?_r=1&_t=ZS-93E9La4w8DB"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Follow us on TikTok"
+    class="inline-block text-slate-400 hover:text-black transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-black rounded-full p-1"
+  >
+    <img
+      src="css/tiktok icon.jpg"
+      alt="TikTok"
+      class="w-6 h-6 md:w-7 md:h-7 object-contain"
+    />
+  </a>
+        </div>
+      </div>
+      <div class="border-t border-slate-700 pt-6 text-center text-slate-400 text-sm">
+        &copy; 2025 African Heritage Hair Oils. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      hamburger.addEventListener('click', () => {
+        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('max-h-0');
+        mobileMenu.classList.toggle('max-h-[500px]');
+      });
+    });
+  </script>
+
+</body>
+</html>

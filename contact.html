@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | African Heritage Hair Oils</title>
+
+  <!-- Tailwind CSS (CDN - for development) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <script>
+    tailwind.config = { theme: { extend: {} } }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .focus-ring:focus {
+      outline: 2px solid #fbbf24;
+      outline-offset: 2px;
+      border-radius: 0.5rem;
+    }
+    /* Optional: subtle focus for form inputs */
+    .form-input:focus {
+      outline: none;
+      border-color: #fbbf24;
+      box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2);
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-900 antialiased">
+
+  <!-- Navigation (identical to other pages) -->
+  <nav class="bg-slate-900 text-white shadow-md md:shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16 md:h-[72px]">
+        <a href="index.html" class="flex flex-col md:flex-row md:items-baseline md:space-x-2 group">
+          <span class="text-xl md:text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600 group-hover:from-yellow-300 transition-all">
+            African Heritage Oils
+          </span>
+          <span class="text-xs md:text-sm font-light text-slate-400 mt-0.5 md:mt-0 tracking-wide">
+            African Hair Care
+          </span>
+        </a>
+
+        <ul class="hidden md:flex items-center space-x-1">
+          <li>
+            <a href="index.html" class="px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all duration-200 hover:bg-slate-800/70 hover:text-yellow-300 focus-ring">Home</a>
+          </li>
+          <li>
+            <a href="about.html" class="px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all duration-200 hover:bg-slate-800/70 hover:text-yellow-300 focus-ring">About</a>
+          </li>
+          <li>
+            <a href="shop.html" class="px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all duration-200 hover:bg-slate-800/70 hover:text-yellow-300 focus-ring">Shop</a>
+          </li>
+          <li>
+            <a href="contact.html" class="px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-all duration-200 bg-slate-800/70 text-yellow-300 focus-ring">Contact</a>
+          </li>
+          <li class="ml-3">
+            <a href="cart.html" class="relative p-2.5 rounded-lg text-slate-400 hover:text-yellow-300 hover:bg-slate-800/60 transition-all duration-200 focus-ring" aria-label="Shopping Cart (0 items)">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <button id="hamburger" class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg hover:bg-slate-800/50 transition-colors focus-ring" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle main menu">
+          <span class="w-5 h-0.5 bg-white mb-1 transition-all duration-300 origin-center"></span>
+          <span class="w-5 h-0.5 bg-white mb-1 transition-all duration-300 origin-center"></span>
+          <span class="w-5 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden overflow-hidden transition-all duration-350 ease-out max-h-0">
+        <div class="pt-2 pb-4 space-y-1.5 bg-slate-800/90 backdrop-blur-md border-t border-slate-700/30">
+          <a href="index.html" class="block px-5 py-3 text-base font-medium text-slate-200 rounded-lg hover:bg-slate-700/70 hover:text-yellow-300 transition-colors focus-ring">Home</a>
+          <a href="about.html" class="block px-5 py-3 text-base font-medium text-slate-200 rounded-lg hover:bg-slate-700/70 hover:text-yellow-300 transition-colors focus-ring">About</a>
+          <a href="shop.html" class="block px-5 py-3 text-base font-medium text-slate-200 rounded-lg hover:bg-slate-700/70 hover:text-yellow-300 transition-colors focus-ring">Shop</a>
+          <a href="contact.html" class="block px-5 py-3 text-base font-medium text-slate-200 rounded-lg bg-slate-700/90 text-yellow-300 transition-colors focus-ring">Contact</a>
+          <a href="cart.html" class="flex items-center px-5 py-3 text-base font-medium text-slate-200 rounded-lg hover:bg-slate-700/70 hover:text-yellow-300 transition-colors focus-ring">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            Cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- Contact Hero Section -->
+<section class="relative bg-slate-900 text-white py-20 md:py-28">
+  <!-- Background Image -->
+  <div 
+    class="absolute inset-0 bg-cover bg-center z-0"
+    style="background-image: url('css/contact-us-banner.jpg');"
+  ></div>
+  
+  <!-- Dark Overlay (adjust opacity as needed) -->
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-900/70 to-slate-800/70 z-0"></div>
+
+  <!-- Content -->
+  <div class="container mx-auto px-4 max-w-3xl text-center relative z-10">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4">Contact Us</h1>
+    <p class="text-slate-300 text-lg md:text-xl">We'd love to hear from you</p>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Contact Info -->
+        <div class="lg:w-1/2">
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Get In Touch</h3>
+          <p class="text-slate-700 mb-8 leading-relaxed">
+            Have questions about our products or need assistance with your order? Our team is here to help!
+          </p>
+
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope text-yellow-600 text-lg"></i>
+              </div>
+              <div>
+                <p class="font-medium text-slate-900">Email Us</p>
+                <p class="text-slate-600">helloafricanheritageoils@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-phone text-yellow-600 text-lg"></i>
+              </div>
+              <div>
+                <p class="font-medium text-slate-900">Call Us</p>
+                <p class="text-slate-600">+254113177824</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-yellow-600 text-lg"></i>
+              </div>
+              <div>
+                <p class="font-medium text-slate-900">Visit Us</p>
+                <p class="text-slate-600">123 Heritage Lane, Nairobi, Kenya</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:w-1/2">
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Send Us a Message</h3>
+          <form id="contactForm" class="space-y-5">
+            <div>
+              <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+                class="form-input w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-0 focus:ring-transparent"
+              />
+              <span class="text-red-500 text-sm mt-1 hidden" id="name-error"></span>
+            </div>
+
+            <div>
+              <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+                class="form-input w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-0 focus:ring-transparent"
+              />
+              <span class="text-red-500 text-sm mt-1 hidden" id="email-error"></span>
+            </div>
+
+            <div>
+              <textarea
+                id="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+                class="form-input w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-0 focus:ring-transparent"
+              ></textarea>
+              <span class="text-red-500 text-sm mt-1 hidden" id="message-error"></span>
+            </div>
+
+            <button
+              type="submit"
+              class="px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-semibold rounded-lg shadow-md transition-colors focus-ring w-full md:w-auto"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white pt-12 pb-6">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+        <div class="text-center md:text-left mb-6 md:mb-0">
+          <div class="text-2xl font-bold">African Heritage</div>
+          <div class="text-yellow-400">Hair Oils</div>
+        </div>
+        <div class="flex space-x-4">
+         <!-- WhatsApp -->
+  <a
+    href="https://wa.me/+254113177824"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+    class="inline-block text-slate-400 hover:text-green-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 rounded-full p-1"
+  >
+    <img
+      src="css/whatsapp-icon.jpg"
+      alt="WhatsApp"
+      class="w-6 h-6 md:w-7 md:h-7 object-contain"
+    />
+  </a>
+
+  <!-- Instagram -->
+  <a
+    href="https://www.instagram.com/african.heritage__?igsh=MjhuY2R6Z2N5NGdo"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Follow us on Instagram"
+    class="inline-block text-slate-400 hover:text-pink-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-pink-600 rounded-full p-1"
+  >
+    <img
+      src="css/instagram icon.jpg"
+      alt="Instagram"
+      class="w-6 h-6 md:w-7 md:h-7 object-contain"
+    />
+  </a>
+
+  <!-- TikTok -->
+  <a
+    href="https://www.tiktok.com/@african.heritage_?_r=1&_t=ZS-93E9La4w8DB"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Follow us on TikTok"
+    class="inline-block text-slate-400 hover:text-black transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-black rounded-full p-1"
+  >
+    <img
+      src="css/tiktok icon.jpg"
+      alt="TikTok"
+      class="w-6 h-6 md:w-7 md:h-7 object-contain"
+    />
+  </a></i></a>
+        </div>
+      </div>
+      <div class="border-t border-slate-700 pt-6 text-center text-slate-400 text-sm">
+        &copy; 2025 African Heritage Hair Oils. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      hamburger.addEventListener('click', () => {
+        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('max-h-0');
+        mobileMenu.classList.toggle('max-h-[500px]');
+      });
+
+      // Optional: Basic form validation
+      const form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          let isValid = true;
+
+          // Reset errors
+          document.querySelectorAll('.error-message').forEach(el => {
+            el.classList.add('hidden');
+          });
+
+          // Validate name
+          const name = document.getElementById('name');
+          if (!name.value.trim()) {
+            document.getElementById('name-error').textContent = 'Name is required';
+            document.getElementById('name-error').classList.remove('hidden');
+            isValid = false;
+          }
+
+          // Validate email
+          const email = document.getElementById('email');
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!email.value.trim() || !emailRegex.test(email.value)) {
+            document.getElementById('email-error').textContent = 'Valid email is required';
+            document.getElementById('email-error').classList.remove('hidden');
+            isValid = false;
+          }
+
+          // Validate message
+          const message = document.getElementById('message');
+          if (!message.value.trim()) {
+            document.getElementById('message-error').textContent = 'Message is required';
+            document.getElementById('message-error').classList.remove('hidden');
+            isValid = false;
+          }
+
+          if (isValid) {
+            alert('Thank you! Your message has been sent.');
+            form.reset();
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
